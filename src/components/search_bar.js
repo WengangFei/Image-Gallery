@@ -6,7 +6,7 @@ function submit(e){
     e.preventDefault();
     setShow((prev)=>!prev);
     let URL = "https://pixabay.com/api/?key=41946584-34e060113e059c5526613deaa"+"&q="+encodeURIComponent(word);
-    fetch(URL).then(resp=>resp.json()).then(data=>setData(data))
+    fetch(URL).then(resp=>resp.json()).then(data=>setData(data)).catch(error=>console.log(error))
 }
   return (
     <div>
